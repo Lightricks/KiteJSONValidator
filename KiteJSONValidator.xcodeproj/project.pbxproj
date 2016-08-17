@@ -18,6 +18,9 @@
 		67EDF5E7188C823F004DEC72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EDF5E6188C823F004DEC72 /* UIKit.framework */; };
 		67EDF5E9188C8247004DEC72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EDF5E8188C8247004DEC72 /* Foundation.framework */; };
 		67EDF5EC188C8373004DEC72 /* KiteJSONValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EDF5DE188C81CE004DEC72 /* KiteJSONValidator.m */; };
+		A19C921B1D64686A00A357A9 /* KiteJSONValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EDF5DE188C81CE004DEC72 /* KiteJSONValidator.m */; };
+		A19C921C1D64686A00A357A9 /* KiteValidationPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AE80EB18929CDB00620BF5 /* KiteValidationPair.m */; };
+		A19C92221D6468F100A357A9 /* schema in CopyFiles */ = {isa = PBXBuildFile; fileRef = 37C8BA2719105A17004D3E23 /* schema */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,19 @@
 			remoteInfo = KiteJSONResources;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A19C92101D64684F00A357A9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				A19C92221D6468F100A357A9 /* schema in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		37C8BA19191058D1004D3E23 /* KiteJSONValidator.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiteJSONValidator.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +64,7 @@
 		67EDF5DE188C81CE004DEC72 /* KiteJSONValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiteJSONValidator.m; sourceTree = "<group>"; };
 		67EDF5E6188C823F004DEC72 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		67EDF5E8188C8247004DEC72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A19C92121D64684F00A357A9 /* libKiteJSONValidator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKiteJSONValidator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +82,13 @@
 				67EDF5E9188C8247004DEC72 /* Foundation.framework in Frameworks */,
 				67EDF5E7188C823F004DEC72 /* UIKit.framework in Frameworks */,
 				67B6B11E188C331200E1630A /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A19C920F1D64684F00A357A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +137,7 @@
 			children = (
 				67B6B11A188C331200E1630A /* KiteJSONValidatorTests.xctest */,
 				37C8BA19191058D1004D3E23 /* KiteJSONValidator.bundle */,
+				A19C92121D64684F00A357A9 /* libKiteJSONValidator.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +222,23 @@
 			productReference = 67B6B11A188C331200E1630A /* KiteJSONValidatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A19C92111D64684F00A357A9 /* KiteJSONValidator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A19C921A1D64684F00A357A9 /* Build configuration list for PBXNativeTarget "KiteJSONValidator" */;
+			buildPhases = (
+				A19C920E1D64684F00A357A9 /* Sources */,
+				A19C920F1D64684F00A357A9 /* Frameworks */,
+				A19C92101D64684F00A357A9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KiteJSONValidator;
+			productName = KiteJSONValidator;
+			productReference = A19C92121D64684F00A357A9 /* libKiteJSONValidator.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,6 +248,11 @@
 				CLASSPREFIX = Kite;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = KiteJSONValidator;
+				TargetAttributes = {
+					A19C92111D64684F00A357A9 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
 			};
 			buildConfigurationList = 67B6B112188C32E800E1630A /* Build configuration list for PBXProject "KiteJSONValidator" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -221,6 +268,7 @@
 			targets = (
 				67B6B119188C331200E1630A /* KiteJSONValidatorTests */,
 				37C8BA18191058D1004D3E23 /* KiteJSONResources */,
+				A19C92111D64684F00A357A9 /* KiteJSONValidator */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +310,15 @@
 				67EDF5EC188C8373004DEC72 /* KiteJSONValidator.m in Sources */,
 				67AE80EC18929CDB00620BF5 /* KiteValidationPair.m in Sources */,
 				67B6B12A188C331200E1630A /* KiteJSONValidatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A19C920E1D64684F00A357A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A19C921B1D64686A00A357A9 /* KiteJSONValidator.m in Sources */,
+				A19C921C1D64686A00A357A9 /* KiteValidationPair.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +512,87 @@
 			};
 			name = Release;
 		};
+		A19C92181D64684F00A357A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A19C92191D64684F00A357A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -484,6 +622,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A19C921A1D64684F00A357A9 /* Build configuration list for PBXNativeTarget "KiteJSONValidator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A19C92181D64684F00A357A9 /* Debug */,
+				A19C92191D64684F00A357A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
