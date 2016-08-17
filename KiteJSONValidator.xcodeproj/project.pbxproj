@@ -31,6 +31,13 @@
 			remoteGlobalIDString = 37C8BA18191058D1004D3E23;
 			remoteInfo = KiteJSONResources;
 		};
+		A14489391D649C1B004A757B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B6B10F188C32E800E1630A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37C8BA18191058D1004D3E23;
+			remoteInfo = KiteJSONResources;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -233,6 +240,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A144893A1D649C1B004A757B /* PBXTargetDependency */,
 			);
 			name = KiteJSONValidator;
 			productName = KiteJSONValidator;
@@ -329,6 +337,11 @@
 			isa = PBXTargetDependency;
 			target = 37C8BA18191058D1004D3E23 /* KiteJSONResources */;
 			targetProxy = 37C8BA2A19105A48004D3E23 /* PBXContainerItemProxy */;
+		};
+		A144893A1D649C1B004A757B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37C8BA18191058D1004D3E23 /* KiteJSONResources */;
+			targetProxy = A14489391D649C1B004A757B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -552,6 +565,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -630,6 +644,7 @@
 				A19C92191D64684F00A357A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
